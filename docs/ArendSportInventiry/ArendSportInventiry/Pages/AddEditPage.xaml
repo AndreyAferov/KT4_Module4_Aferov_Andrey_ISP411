@@ -11,13 +11,13 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="190"></ColumnDefinition>
@@ -26,18 +26,31 @@
             <ColumnDefinition Width="190"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <Label Content="Фамилия:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Имя:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Отчество:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Должность:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Дата Рождения:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        <Label Content="Фамилия:" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Имя:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Отчество:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Должность:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Дата Рождения:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
         
-        <Label Content="Телефон:" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Пол:" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Email:" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Логин:" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Пароль:" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-        <Label Content="Подтверждение пароля:" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        <Label Content="Телефон:" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Пол:" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Email:" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Логин:" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Пароль:" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <Label Content="Подтверждение пароля:" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+
+
+        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="0" Grid.Column="3"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="3"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="3"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="3"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="3"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="3"></TextBox>
+
 
         <ComboBox Grid.Row="3" Grid.Column="1" DisplayMemberPath="NameRole"></ComboBox>
 
