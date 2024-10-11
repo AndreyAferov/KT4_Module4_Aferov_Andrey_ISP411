@@ -16,5 +16,25 @@
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

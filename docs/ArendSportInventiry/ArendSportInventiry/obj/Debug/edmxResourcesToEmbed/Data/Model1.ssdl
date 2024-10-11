@@ -21,6 +21,16 @@
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="NameRole" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="Id" />
@@ -34,16 +44,16 @@
     <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="SerialPassport" Type="int" Nullable="false" />
-    <Property Name="NumberPassport" Type="int" Nullable="false" />
+    <Property Name="SerialPassport" Type="int" />
+    <Property Name="NumberPassport" Type="int" />
     <Property Name="DateBirth" Type="date" Nullable="false" />
-    <Property Name="LastSeenDate" Type="date" Nullable="false" />
-    <Property Name="LastSeenTime" Type="time" Precision="7" Nullable="false" />
-    <Property Name="TypeLogin" Type="int" Nullable="false" />
+    <Property Name="LastSeenDate" Type="date" />
+    <Property Name="LastSeenTime" Type="time" Precision="7" />
+    <Property Name="TypeLogin" Type="int" />
     <Property Name="MaleFemale" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_User_LoginStatus">
-    <End Role="LoginStatus" Type="Self.LoginStatus" Multiplicity="1" />
+    <End Role="LoginStatus" Type="Self.LoginStatus" Multiplicity="0..1" />
     <End Role="User" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoginStatus">
@@ -82,6 +92,7 @@
     <EntitySet Name="FemaleMale" EntityType="Self.FemaleMale" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoginStatus" EntityType="Self.LoginStatus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_User_LoginStatus" Association="Self.FK_User_LoginStatus">
       <End Role="LoginStatus" EntitySet="LoginStatus" />

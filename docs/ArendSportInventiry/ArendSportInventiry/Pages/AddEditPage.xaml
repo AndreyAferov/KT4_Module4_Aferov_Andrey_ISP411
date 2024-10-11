@@ -25,37 +25,35 @@
             <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition Width="190"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
-        <Label Content="Фамилия:" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Имя:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Отчество:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Должность:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Дата Рождения:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        
-        <Label Content="Телефон:" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Пол:" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Email:" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Логин:" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Пароль:" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
-        <Label Content="Подтверждение пароля:" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
 
+        <Label Content="Id:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0"/>
+        <Label Content="Фамилия:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"/>
+        <Label Content="Имя:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0"/>
+        <Label Content="Отчество:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0"/>
+        <Label Content="Должность:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0"/>
+        <Label Content="Дата рождения:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0"/>
+        <Label Content="Телефон:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="Пол:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="2"/>
+        <Label Content="Email:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="2"/>
 
-        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
-        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
-        <TextBox Grid.Row="0" Grid.Column="3"></TextBox>
-        <TextBox Grid.Row="1" Grid.Column="3"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="3"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="3"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="3"></TextBox>
-        <TextBox Grid.Row="5" Grid.Column="3"></TextBox>
+        <TextBox x:Name="IdTextBox" Grid.Row="0" Grid.Column="1" IsReadOnly="True"/>
+        <TextBox x:Name="Surname" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="Name" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="Patronymic" Grid.Row="3" Grid.Column="1"/>
+        <ComboBox DisplayMemberPath="NameRole" x:Name="RoleCombo" Grid.Row="4" Grid.Column="1"/>
+        <DatePicker x:Name="BirthDate" Grid.Row="5" Grid.Column="1"/>
+        <TextBox x:Name="Phone" Grid.Row="1" Grid.Column="3" Text="+7(977)-170-30-37"/>
+        <ComboBox DisplayMemberPath="MaleFemaleName" x:Name="GenderComboBox" Grid.Row="2" Grid.Column="3"/>
+        <TextBox x:Name="Email" Grid.Row="0" Grid.Column="3"/>
 
+        <Label Content="Логин:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2"/>
+        <TextBox x:Name="Login" Grid.Row="3" Grid.Column="3"/>
+        <Label Content="Пароль:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="2"/>
+        <PasswordBox x:Name="Password" Grid.Row="4" Grid.Column="3"/>
+        <Label Content="Подтверждение пароля:" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="2"/>
+        <PasswordBox x:Name="ConfirmPassword" Grid.Row="5" Grid.Column="3"/>
 
-        <ComboBox Grid.Row="3" Grid.Column="1" DisplayMemberPath="NameRole"></ComboBox>
-
-        <Button Grid.Row="6" Content="Назад" x:Name="BackButton" Click="BackButton_Click"></Button>
-        <Button HorizontalAlignment="Right" Grid.Column="4" Grid.Row="6" Content="Сохранить" x:Name="SaveButton" Click="SaveButton_Click"></Button>
-
+        <Button Content="Назад" x:Name="BackButton" Grid.Row="9" Grid.Column="0" Click="BackButton_Click"/>
+        <Button Content="Сохранить" x:Name="SaveButton" Grid.Row="9" Grid.Column="3" Click="SaveButton_Click"/>
     </Grid>
 </Page>

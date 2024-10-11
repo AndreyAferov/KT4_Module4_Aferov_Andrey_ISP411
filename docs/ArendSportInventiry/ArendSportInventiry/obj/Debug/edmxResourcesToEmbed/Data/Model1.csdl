@@ -24,6 +24,16 @@
     <Property Name="NameRole" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="User" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="Id" />
@@ -37,12 +47,12 @@
     <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="SerialPassport" Type="Int32" Nullable="false" />
-    <Property Name="NumberPassport" Type="Int32" Nullable="false" />
+    <Property Name="SerialPassport" Type="Int32" />
+    <Property Name="NumberPassport" Type="Int32" />
     <Property Name="DateBirth" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="LastSeenDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="LastSeenTime" Type="Time" Nullable="false" Precision="7" />
-    <Property Name="TypeLogin" Type="Int32" Nullable="false" />
+    <Property Name="LastSeenDate" Type="DateTime" Precision="0" />
+    <Property Name="LastSeenTime" Type="Time" Precision="7" />
+    <Property Name="TypeLogin" Type="Int32" />
     <Property Name="MaleFemale" Type="Int32" Nullable="false" />
     <NavigationProperty Name="FemaleMale" Relationship="Self.FK_User_MaleFemale" FromRole="User" ToRole="FemaleMale" />
     <NavigationProperty Name="LoginStatus" Relationship="Self.FK_User_LoginStatus" FromRole="User" ToRole="LoginStatus" />
@@ -61,7 +71,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_User_LoginStatus">
-    <End Role="LoginStatus" Type="Self.LoginStatus" Multiplicity="1" />
+    <End Role="LoginStatus" Type="Self.LoginStatus" Multiplicity="0..1" />
     <End Role="User" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoginStatus">
@@ -88,6 +98,7 @@
     <EntitySet Name="FemaleMale" EntityType="Self.FemaleMale" />
     <EntitySet Name="LoginStatus" EntityType="Self.LoginStatus" />
     <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="User" EntityType="Self.User" />
     <AssociationSet Name="FK_User_MaleFemale" Association="Self.FK_User_MaleFemale">
       <End Role="FemaleMale" EntitySet="FemaleMale" />

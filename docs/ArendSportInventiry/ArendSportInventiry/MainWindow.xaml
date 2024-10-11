@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ArendSportInventiry"
         mc:Ignorable="d"
         Title="ИС по прокату спортивного инвентаря" Height="650" Width="1000"
-        MinHeight="650" MinWidth="1000">
+        MinHeight="650" MinWidth="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"></RowDefinition>
@@ -16,6 +16,6 @@
             <Label Content="Прокат спортивного инвентаря" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35"></Label>
             <Image HorizontalAlignment="Left" Margin="150,0,0,0" Source="/Resources/logo.png" />
         </Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Frame>
+        <Frame  Margin="0,30,0,0" x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Frame>
     </Grid>
 </Window>

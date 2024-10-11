@@ -19,8 +19,9 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="400"></ColumnDefinition>
+                            <ColumnDefinition Width="350"></ColumnDefinition>
                             <ColumnDefinition Width="300"></ColumnDefinition>
+                            <ColumnDefinition Width="200"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <StackPanel>
                         <TextBlock Text="{Binding Surname, StringFormat={} Фамилия {0}}"></TextBlock>
@@ -30,8 +31,8 @@
                         <TextBlock Text="{Binding DateBirth, StringFormat={} Дата рождения {0}}"></TextBlock>
                         <TextBlock Text="{Binding PhoneNumber, StringFormat={} Номер телефона {0}}"></TextBlock>
                     </StackPanel>
-                    <TextBlock Grid.Column="1" Text="{Binding Role1.NameRole, StringFormat={} Роль {0}}"></TextBlock>
-  
+                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="{Binding Role1.NameRole, StringFormat={} Роль {0}}"></TextBlock>
+                        <Button Grid.Column="2" x:Name="EditButton" Click="EditButton_Click" Content="Редактировать"></Button>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

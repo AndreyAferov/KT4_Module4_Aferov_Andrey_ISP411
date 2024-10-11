@@ -4,10 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="971acbeee3e3429ca1d39343db0aa104" Name="Diagram1">
+      <Diagram DiagramId="7ffd9a63306a4b52a961ff2740939915" Name="Diagram1">
         <EntityTypeShape EntityType="SportsModel.FemaleMale" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SportsModel.LoginStatus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SportsModel.Role" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SportsModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SportsModel.User" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
         <AssociationConnector Association="SportsModel.FK_User_MaleFemale" ManuallyRouted="false" />
         <AssociationConnector Association="SportsModel.FK_User_LoginStatus" ManuallyRouted="false" />
